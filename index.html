@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Univeriell Utforming</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onscroll="scroll()">
+        <nav>
+            <h2>Universiell Utforming</h2>
+
+        </nav>
+        
+
+    </body>
+
+
+
+
+
+
+
+    <script>
+        // Source - https://stackoverflow.com/a/50095809
+        // Posted by K. P., modified by community. See post 'Timeline' for change history
+        // Retrieved 2026-09-10, License - CC BY-SA 3.0
+
+        window.onscroll = function() {scrollFunction()} ;
+        function scrollFunction() {
+        // After scrolling down "number"px, the background-color changes
+            if(document.body.scrollTop >=300 || document.documentElement.scrollTop >= 300){
+                document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+            }
+            else if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100) {
+                document.getElementsByTagName("body")[0].style.backgroundColor = "red";
+            } 
+            
+            else{
+                document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+            }
+        }
+
+        function scrollToSelected(Selected) {
+            const element = document.getElementById(Selected);
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</html>
